@@ -1,5 +1,4 @@
-/* eslint-disable @typescript-eslint/ban-types */
-/* eslint-disable @typescript-eslint/no-unused-vars */
+
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
@@ -8,7 +7,6 @@ import { useState,useEffect } from "react"
 import { CartProducts } from "../store/CartProducts";
 
 import {
-  useRecoilState,
   useRecoilValue,
   useSetRecoilState,
 } from 'recoil';

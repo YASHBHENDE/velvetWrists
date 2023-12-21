@@ -1,8 +1,5 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable react-hooks/exhaustive-deps */
-/* eslint-disable prefer-const */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-import { useNavigate, useParams } from "react-router-dom";
+
+import {  useParams } from "react-router-dom";
 import { ProductsDetails, productdetail_array } from "../productsDetails";
 import { useEffect, useState } from "react";
 import Grid from "@mui/material/Grid/Grid";
@@ -10,9 +7,6 @@ import Typography from "@mui/material/Typography/Typography";
 import { Button, Paper } from "@mui/material";
 import { CartProducts } from "../store/CartProducts";
 import {
-  atom,
-  useRecoilState,
-  useRecoilValue,
   useSetRecoilState,
 } from 'recoil';
 
@@ -38,13 +32,13 @@ export function ProductDetail() {
     numericId = parseInt(id, 10);
   }
 
-  const [productDetails, setProductDetail] = useState(ProductsDetails);
+  const [productDetails] = useState(ProductsDetails);
   const setProduct = useSetRecoilState(CartProducts)
 
   const [specificProduct, setspecificProduct] = useState<product | null>(null);
 
   function findDetail() {
-    let detail = productDetails.find((ele) => ele.id === numericId);
+    const detail = productDetails.find((ele) => ele.id === numericId);
     if (detail === undefined) {
       console.log("err");
     } else {

@@ -1,15 +1,14 @@
-/* eslint-disable prefer-const */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-import React, { useState, ChangeEvent, useEffect } from 'react';
+
+import React, { useState } from 'react';
 import { TextField, IconButton, InputAdornment, Paper, List, ListItem, ListItemText } from '@mui/material';
 import { Search as SearchIcon } from '@mui/icons-material';
-import { ProductsDetails, prod_details } from '../productsDetails';
+import { ProductsDetails} from '../productsDetails';
 
 import { productdetail_array } from '../productsDetails';
 import { useNavigate } from 'react-router-dom';
 
 export function SearchBar() {
-  const [product, setProduct] = useState(ProductsDetails)
+  const [product,] = useState(ProductsDetails)
   
 
   const [search,setsearch] = useState('')
@@ -18,7 +17,7 @@ export function SearchBar() {
   
   function handleSearch(){
     
-    let filteredProduct = product.filter((watch) =>
+    const filteredProduct = product.filter((watch) =>
         watch.name.toLowerCase().includes(search.toLowerCase())
     );
     

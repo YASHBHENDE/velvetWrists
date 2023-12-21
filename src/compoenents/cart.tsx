@@ -1,18 +1,18 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import React, { useCallback, useEffect } from "react";
-import { productdetail_array,prod_details } from "../productsDetails";
+import {  useEffect } from "react";
+
 import { ProductItem } from "./cartProducts";
-import { useState } from "react";
+
 import { CartProducts } from "../store/CartProducts";
 import {
-  useRecoilState,
+
   useRecoilValue,
   useSetRecoilState,
 } from 'recoil';
 import { TotalCartPrice } from "../store/TotalCartPrice";
 import Button from "@mui/material/Button/Button";
 import Typography from "@mui/material/Typography/Typography";
-import { Margin } from "@mui/icons-material";
+
 import { useNavigate } from "react-router-dom";
 
 export function Cart() {
