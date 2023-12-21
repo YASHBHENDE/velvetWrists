@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
+
 import * as React from 'react';
 import Drawer from '@mui/material/Drawer';
 import Toolbar from '@mui/material/Toolbar';
@@ -16,8 +16,7 @@ import Button from '@mui/material/Button/Button';
 import { productdetail_array } from '../productsDetails';
 import { SetStateAction, useState } from 'react';
 import { ProductsDetails } from '../productsDetails';
-import FormGroup from '@mui/material/FormGroup';
-import FormControlLabel from '@mui/material/FormControlLabel';
+
 const drawerWidth = 240;
 
 
@@ -27,7 +26,7 @@ interface params{
 
 export const Sort = React.memo(function _sort({setProduct}:params) {
   
-  const [product, _setproduct] = useState(ProductsDetails);
+  const [product, ] = useState(ProductsDetails);
   const [minPrice,setMinPrice] = useState(0)
   const [maxPrice,setmaxprice] = useState(1000000)
   const [selectedBrands,setBrand] = useState<string[]>([])
@@ -41,9 +40,7 @@ export const Sort = React.memo(function _sort({setProduct}:params) {
     console.log(selectedBrands);
   }, [selectedBrands]);
 
-  function handleChange(){
 
-  }
   return (
     <>
       <Drawer
