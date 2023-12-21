@@ -49,31 +49,33 @@ export const ProductItem: React.FC<types> = React.memo(function ProductItem({ na
       }}
     >
       <Box sx={{ display: 'flex', alignItems: 'center' }}>
-        <Typography sx={{ marginLeft: 2 }}>{name}</Typography> <br />
-        <Button variant="outlined" size="small" sx={{ marginRight: 1 }} onClick={() => {
-          if (quantity > 0) {
-            setQuantity(quantity - 1);
-            console.log("after "+quantity)
+        <div style={{padding:"5px"}}>
+          <Typography sx={{ marginLeft: 2 }}>{name}</Typography> <br />
+          <Button variant="outlined" size="small" sx={{ marginRight: 1 }} onClick={() => {
+            if (quantity > 0) {
+              setQuantity(quantity - 1);
+              console.log("after "+quantity)
+              
+            }else if(quantity <= 0){
+              const updatedCartProducts = _cartProducts.filter((product) => product.id !== id);
             
-          }else if(quantity <= 0){
-            const updatedCartProducts = _cartProducts.filter((product) => product.id !== id);
-          
-            setCartProducts(updatedCartProducts);
-            
+              setCartProducts(updatedCartProducts);
+              
 
-          }
-          settotal((para: number) => para - price);
-        }}>
-          -
-        </Button>
-        {quantity}
-        <Button variant="outlined" size="small" onClick={() => {
-          setQuantity(quantity + 1);
-          settotal((para: number) => para +  price);
-          
-        }}>
-          +
-        </Button>
+            }
+            settotal((para: number) => para - price);
+          }}>
+            -
+          </Button>
+          {quantity}
+          <Button variant="outlined" size="small" onClick={() => {
+            setQuantity(quantity + 1);
+            settotal((para: number) => para +  price);
+            
+          }}>
+            +
+          </Button>
+        </div>
       </Box>
       <Typography>{price}</Typography>
       <Typography>{price * quantity}</Typography>

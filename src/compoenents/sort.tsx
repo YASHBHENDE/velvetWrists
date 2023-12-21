@@ -61,7 +61,7 @@ export const Sort = React.memo(function _sort({setProduct}:params) {
 
         <List>
             {   
-              ['mens watch rolex', 'titan', 'jacob and co', 'chor bazar'].map((text, index) => {
+              ['rolex', 'patek philippe', 'jacob and co', 'breitling'].map((text, index) => {
                 const checkboxId = `checkbox-${index}`;
 
                 return (
@@ -78,7 +78,7 @@ export const Sort = React.memo(function _sort({setProduct}:params) {
                             
                             if(checkbox.checked){
                               setBrand((previousbrand) => [...previousbrand, text]);
-                              setProduct((products)=>{ return products.filter((product)=>{return product.name == text})})
+                              setProduct((products)=>{ return products.filter((product)=>{return product.name.includes(text);})})
                             }else{
                               setProduct(product)
                               
@@ -128,7 +128,7 @@ export const Sort = React.memo(function _sort({setProduct}:params) {
                     return product.price >= minPrice && product.price <= maxPrice
                  })
               });
-          }}>GO</Button>
+          }}>filter</Button>
         </Box>
       </Drawer>
     </>

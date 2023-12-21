@@ -53,7 +53,7 @@ export function SearchBar() {
     return  <>
           <div style={{ width: '300px', position: 'relative' }}>
           <TextField
-            label="Search"
+            label="Search "
             variant="outlined"
             fullWidth
 

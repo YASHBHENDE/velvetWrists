@@ -71,7 +71,7 @@ export function ProductDetail() {
         </Grid>
       
         {/* Right Grid (Product Details) */}
-        <Grid item xs={12} md={8}>
+        <Grid item xs={12} md={8} style={{marginTop:"50px"}}>
           <Paper style={{ padding: "20px" }}>
             <Typography variant="h5" gutterBottom>
               {specificProduct.name}
