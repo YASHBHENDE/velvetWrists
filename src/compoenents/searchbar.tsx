@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { TextField, IconButton, InputAdornment, Paper, List, ListItem, ListItemText } from '@mui/material';
 import { Search as SearchIcon } from '@mui/icons-material';
 import { ProductsDetails} from '../productsDetails';
