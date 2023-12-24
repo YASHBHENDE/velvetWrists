@@ -35,7 +35,7 @@ export const Sort = React.memo(function _sort({setProduct}:params) {
 
   React.useEffect(()=>{
     setProduct(product)
-  },[])
+  },[product,setProduct])
   React.useEffect(() => {
     console.log(selectedBrands);
   }, [selectedBrands]);
