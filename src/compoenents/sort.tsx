@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 
 import * as React from 'react';
 import Drawer from '@mui/material/Drawer';
@@ -35,7 +36,8 @@ export const Sort = React.memo(function _sort({setProduct}:params) {
 
   React.useEffect(()=>{
     setProduct(product)
-  },[product,setProduct])
+  },[])
+
   React.useEffect(() => {
     console.log(selectedBrands);
   }, [selectedBrands]);
