@@ -1,6 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable react-hooks/exhaustive-deps */
-
 import * as React from 'react';
 import Drawer from '@mui/material/Drawer';
 import Toolbar from '@mui/material/Toolbar';
@@ -28,7 +25,7 @@ export const Sort = React.memo(function _sort({ setProduct }: params) {
 
   React.useEffect(() => {
     setProduct(product);
-  }, []);
+  }, [product,setProduct]);
 
   React.useEffect(() => {
     console.log(selectedBrands);
