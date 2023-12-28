@@ -78,7 +78,7 @@ export const ProductItem: React.FC<types> = React.memo(function ProductItem({ na
         </div>
       </Box>
       <Typography>{price}</Typography>
-      <Typography>{price * quantity}</Typography>
+      <Typography>${price * quantity}</Typography>
     </Box>
   );
 });

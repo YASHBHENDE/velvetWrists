@@ -51,7 +51,7 @@ export function Cart() {
           <ProductItem name={ele.name} price={ele.price} id={ele.id}  />
         ))}
 
-        <h3 style={{ marginLeft: "95%" }}>total: {totalCartPrice}</h3>
+        <h3 style={{ marginLeft: "95%" }}>total: ${totalCartPrice}</h3>
         
         <Button
           variant="contained"
