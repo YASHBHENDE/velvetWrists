@@ -46,7 +46,7 @@ export function ProductList() {
                       {ele.name}
                     </Typography>
                     <Typography variant="h6" gutterBottom>
-                      {ele.price}(-{ele.offer}%)
+                      ${ele.price}(-{ele.offer}%)
                     </Typography>
                   </a>
                 </CardContent>
